@@ -1,12 +1,14 @@
 *** Settings ***
-Library    RequestLibrary
+Library    RequestsLibrary
 
 *** Variables ***
+
 *** Keywords ***
-Criar Sessão
+Criar Sessão   
     [Arguments]    ${url}
     Create Session    alias=api    url=${url}
 
 Encerrar Sessão
-    Delete All Session
+    Delete All Sessions
+
 *** Test Cases ***
